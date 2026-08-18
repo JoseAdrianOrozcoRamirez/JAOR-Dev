@@ -137,6 +137,15 @@
     font-family:var(--font-mono); font-size:12px; color:var(--text-muted);
   }
   .project-body{padding:26px 22px 28px;}
+  .project-media{border-top:1px solid var(--border);}
+  .project-media.single{padding:28px 22px 22px; text-align:center; background:var(--bg-deep);}
+  .project-media.single img{max-width:280px; width:100%; border:1px solid var(--border-strong); border-radius:4px; box-shadow:0 16px 34px rgba(0,0,0,.4);}
+  .shot-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border);}
+  @media(max-width:640px){.shot-grid{grid-template-columns:repeat(2,1fr);}}
+  .shot-grid a{display:block; overflow:hidden; background:var(--bg-deep); aspect-ratio:4/3;}
+  .shot-grid img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;}
+  .shot-grid a:hover img{transform:scale(1.08);}
+  .shot-caption{font-family:var(--font-mono); font-size:11px; color:var(--text-muted); letter-spacing:.04em; padding:14px 22px; text-align:center;}
   .project-status{display:flex; align-items:center; gap:6px;}
   .project-status .led{width:6px; height:6px; border-radius:50%; background:#5FD98A;}
   .project h3{font-family:var(--font-display); font-size:22px; font-weight:600; margin-bottom:8px;}
@@ -226,7 +235,7 @@
         <div class="tag">APLICACIONES</div>
         <h3>Apps full-stack</h3>
         <p>Sistemas a medida con inicio de sesión, base de datos y backend propio — para negocios que necesitan algo más que un sitio informativo.</p>
-        <div class="stackline"><span>React</span><span>Node/Express</span><span>PostgreSQL</span><span>Figma</span></div>
+        <div class="stackline"><span>React</span><span>Node/Express</span><span>PostgreSQL</span></div>
       </div>
     </div>
   </div>
@@ -244,12 +253,18 @@
         <span>HOJA 01 / A&amp;S — SISTEMA</span>
         <div class="project-status"><span class="led"></span>EN USO ACTIVO</div>
       </div>
+      <div class="project-media single">
+        <a href="img/loginapp.png" target="_blank" rel="noopener">
+          <img src="img/loginapp.png" alt="Pantalla de inicio de sesión — A&amp;S App" loading="lazy">
+        </a>
+      </div>
+      <p class="shot-caption">FIG. 01 — INICIO DE SESIÓN · las pantallas internas no se muestran por confidencialidad de datos de pacientes</p>
       <div class="project-body">
         <span class="featured-badge">PROYECTO PRINCIPAL</span>
         <h3 style="margin-top:14px;">A&amp;S App</h3>
         <p class="desc">Aplicación full-stack para la gestión de un consultorio de nutrición, con autenticación de usuarios, backend propio y base de datos. Actualmente en uso real por el consultorio.</p>
         <div class="stackline">
-          <span>React</span><span>Express</span><span>Node.js</span><span>PostgreSQL</span><span>Figma</span><span>Railway</span><span>Vercel</span>
+          <span>React</span><span>Express</span><span>Node.js</span><span>PostgreSQL</span><span>Railway</span><span>Vercel</span>
         </div>
         <div class="links">
           <a href="https://a-s-app-frontend.vercel.app/login" target="_blank" rel="noopener">Ver aplicación ↗</a>
@@ -262,6 +277,15 @@
         <span>HOJA 02 / A&amp;S — SITIO WEB</span>
         <div class="project-status"><span class="led" style="background:var(--ink);"></span>PUBLICADO</div>
       </div>
+      <div class="project-media">
+        <div class="shot-grid">
+          <a href="img/web1.png" target="_blank" rel="noopener"><img src="img/web1.png" alt="Página de inicio — A&amp;S Clínica de Nutrición" loading="lazy"></a>
+          <a href="img/web2.png" target="_blank" rel="noopener"><img src="img/web2.png" alt="Sección 'Encuentra tu nutricionista'" loading="lazy"></a>
+          <a href="img/web3.png" target="_blank" rel="noopener"><img src="img/web3.png" alt="Sección de ubicación con mapa" loading="lazy"></a>
+          <a href="img/web4.png" target="_blank" rel="noopener"><img src="img/web4.png" alt="Widget de WhatsApp en vista móvil" loading="lazy"></a>
+        </div>
+      </div>
+      <p class="shot-caption">FIG. 02 — INICIO · ENCUENTRA TU NUTRICIONISTA · UBICACIÓN · CHAT WHATSAPP</p>
       <div class="project-body">
         <h3>A&amp;S Clínica de Nutrición</h3>
         <p class="desc">Sitio web responsive para el mismo consultorio, enfocado en presencia digital y captación de pacientes nuevos.</p>
@@ -285,7 +309,7 @@
     <div class="about-grid">
       <div>
         <p><strong>Estudiante de Ingeniería en Ciencias y Sistemas</strong> en la Universidad de San Carlos de Guatemala (USAC), construyendo proyectos reales mientras aprendo.</p>
-        <p>Ya llevo un sistema completo en producción — desde el diseño en Figma hasta el backend y la base de datos — y estoy buscando más proyectos con negocios que necesiten presencia digital o herramientas a medida.</p>
+        <p>Ya llevo un sistema completo en producción — desde el frontend hasta el backend y la base de datos — y estoy buscando más proyectos con negocios que necesiten presencia digital o herramientas a medida.</p>
       </div>
       <div class="coord-list">
         <div><span>Base</span><span>Guatemala</span></div>
@@ -293,7 +317,6 @@
         <div><span>Frontend</span><span>React</span></div>
         <div><span>Backend</span><span>Node.js / Express</span></div>
         <div><span>Base de datos</span><span>PostgreSQL</span></div>
-        <div><span>Diseño</span><span>Figma</span></div>
       </div>
     </div>
   </div>
